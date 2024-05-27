@@ -8,6 +8,7 @@ import Typography from '@/components/design-system/atoms/Typography';
 import Alert from '@mui/material/Alert';
 import CheckIcon from '@mui/icons-material/Check';
 import { Box } from '@mui/material';
+import TitlePage from '@/components/design-system/atoms/TitlePage';
 
 function Signup(){
     const [firstName, setFirstName] = useState('');
@@ -38,7 +39,7 @@ function Signup(){
             {isAlert && <Alert icon={<CheckIcon fontSize="inherit" />} severity={isSuccess ? "success" : "error"}>
                 {isSuccess ? "Vous avez été enregistré" : "Un problème est survenur"}
             </Alert>}
-            <Typography variant="h4" sx={{marginBottom: 4}}>Signup</Typography>
+            <TitlePage>Signup</TitlePage>
             <Form>
                 <TextField 
                     label="Prénom"

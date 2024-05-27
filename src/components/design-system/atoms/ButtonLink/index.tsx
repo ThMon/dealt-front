@@ -3,22 +3,19 @@ import ButtonMui from '@mui/material/Button';
 
 type Props = {
     label: string,
-    onClick?: (e: any)=>void,
 }
 
-const Button = ({
+const ButtonLink = ({
     label,
-    onClick
 }: Props) => {
     return (
         <ButtonMui 
             variant="contained" 
-            type="submit"
-            onClick={onClick}
+            size="small"
         >
             {label}
         </ButtonMui>
     );
 };
 
-export default Button;
+export default ButtonLink;

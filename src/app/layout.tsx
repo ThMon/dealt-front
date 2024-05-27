@@ -7,7 +7,9 @@ import theme from '@/theme';
 import { NextAuthProvider } from '@/components/general/providers';
 import "./globals.css";
 import AppBar from '@/components/general/appBar';
-import { headers } from "next/headers"; 
+import dynamic from 'next/dynamic';
+const ClientStyledContainer = dynamic(() => import('@/components/general/styledContainer'), { ssr: false });
+
 
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
@@ -18,9 +20,9 @@ export default function RootLayout(props: { children: React.ReactNode }) {
                   <ThemeProvider theme={theme}>
                   <CssBaseline />
                     <AppBar/>
-                    <main>
-                      {props.children}
-                    </main>
+                      <ClientStyledContainer>
+                        {props.children}
+                      </ClientStyledContainer>
                   </ThemeProvider>
               </NextAuthProvider>
           </AppRouterCacheProvider>

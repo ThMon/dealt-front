@@ -9,7 +9,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import Box from '@mui/material/Box';
 import { createTodo } from '@/app/api/todo';
 import { useRouter } from "next/navigation";
-
+import TitlePage from '../design-system/atoms/TitlePage';
 
 export default function CreateTodoForm({session}: any) {
     const router = useRouter();
@@ -44,7 +44,7 @@ export default function CreateTodoForm({session}: any) {
             {isAlert && <Alert icon={<CheckIcon fontSize="inherit" />} severity={isSuccess ? "success" : "error"}>
                 {isSuccess ? "Vous avez été enregistré" : "Un problème est survenur"}
             </Alert>}
-            <Typography variant="h4" sx={{marginBottom: 4}}>Ajoutez une tâche</Typography>
+            <TitlePage>Ajoutez une tâche</TitlePage>
             <Form>
                 <TextField 
                     label="Nom de la tâche"

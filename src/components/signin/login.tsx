@@ -9,6 +9,7 @@ import TextField from "../design-system/atoms/TextField";
 import Alert from "@mui/material/Alert";
 import CheckIcon from '@mui/icons-material/Check';
 import Button from "../design-system/atoms/Button";
+import TitlePage from "../design-system/atoms/TitlePage";
 
 type Props = {
     className?: string;
@@ -43,7 +44,7 @@ const Login = (props: Props) => {
         {isAlert && <Alert icon={<CheckIcon fontSize="inherit" />} severity={ "error"}>
           Email ou mot de passe incorrect
         </Alert>}
-        <Typography variant="h4" sx={{marginBottom: 4}}>Signin</Typography>
+        <TitlePage>Signin</TitlePage>
           <Form> 
             <TextField 
                 label="Email"

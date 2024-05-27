@@ -6,13 +6,12 @@ import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
 const Signout = () => {
-
     return (
         <Box sx={{textAlign: "center"}}>
-            <Typography variant="body1"  mb="8">Êtes-vous sûr de vouloir nous quitter ?</Typography>
+            <Typography variant="h4" sx={{ mb: 4 }}>Êtes-vous sûr de vouloir vous déconnecter ?</Typography>
             <Button
                 label='Se déconnecter'
-                onClick={()=> signOut({ callbackUrl: 'http://localhost:3000/signin' })}
+                onClick={() => signOut({ callbackUrl: 'http://localhost:3000/signin' })}
             />
         </Box>
     );

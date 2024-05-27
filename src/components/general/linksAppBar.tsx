@@ -25,7 +25,7 @@ const LinksAppBar = ({session}: any) => {
                 :
                 <>
                 <Link  href={"/"}>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, textDecoration: path === '/' ? 'underline' : 'none' }} ml={2}>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, textDecoration: path === '/' ? 'underline' : 'none' }} mr={2}>
                         Dashboard
                     </Typography>
                 </Link> 
