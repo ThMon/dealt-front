@@ -17,19 +17,16 @@ import { signin } from "../../user";
           password: { label: "Password", type: "password" },
         },
         async authorize(credentials, req) {
-            console.log("credentials", credentials)
           if (!credentials?.username || !credentials?.password) return null;
           const { username, password } = credentials;
           const response = await signin({
             email: username,
             password: password
           })
-          console.log("response", response)
           if (response.status == 401) {
             return null;
           }
           const user = response.data;
-          console.log("user actio", user)
           return user;
         },
       }),

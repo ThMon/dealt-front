@@ -4,9 +4,10 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/theme';
-import { NextAuthProvider } from '@/components/providers';
+import { NextAuthProvider } from '@/components/general/providers';
 import "./globals.css";
-import AppBar from '@/components/appBar';
+import AppBar from '@/components/general/appBar';
+import { headers } from "next/headers"; 
 
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (

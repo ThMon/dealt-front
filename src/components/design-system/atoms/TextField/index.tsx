@@ -7,6 +7,8 @@ type Props = {
     defaultValue?: string,
     type?: string,
     sx?: any,
+    multiline?: boolean,
+    rows?: number,
     onChange: (e:any)=>void,
 }
 
@@ -16,6 +18,8 @@ const TextField = ({
     defaultValue,
     type,
     sx,
+    multiline,
+    rows,
     onChange
 }: Props) => {
     return (
@@ -28,6 +32,8 @@ const TextField = ({
             defaultValue={defaultValue ?? ''}
             onChange={onChange}
             sx={sx}
+            multiline={multiline ?? false}
+            rows={rows}
         />
     );
 };

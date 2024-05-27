@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import TextField from '@/components/design-system/atoms/TextField';
 import Button from '@/components/design-system/atoms/Button';
-import { getUserById, signin, signup } from '../api/user';
+import { signup } from '../api/user';
 import Form from '@/components/design-system/molecules/form';
 import Typography from '@/components/design-system/atoms/Typography';
 import Alert from '@mui/material/Alert';

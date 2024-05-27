@@ -1,5 +1,5 @@
 "use client"
-import Login from "@/components/login";
+import Login from "@/components/signin/login";
 import React from "react";
 
 type Props = {

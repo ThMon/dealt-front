@@ -9,7 +9,7 @@ const StylesTitle = styled(TypographyMui)({
 
 type Props = {
     variant: any
-    children: string,
+    children: any,
     sx?: any
 }
 

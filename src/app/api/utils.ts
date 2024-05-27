@@ -26,7 +26,7 @@ export const fetchApi = ({type, path ,token, data, tokenType}: fetchType)=>{
         ...config,
         body: JSON.stringify(data)
     }
-    console.log("LAAA",`${API_URL}${API_PRFIX}${path}`)
+
     return fetch(`${API_URL}${API_PRFIX}${path}`, 
             type === "GET" || type === "DELETE" 
                 ? config 
@@ -37,7 +37,6 @@ export const fetchApi = ({type, path ,token, data, tokenType}: fetchType)=>{
                 return response
             })
             .catch((err)=>{
-                console.log(err)
                 return err
             })
 

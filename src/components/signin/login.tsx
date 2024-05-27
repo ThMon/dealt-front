@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Box from '@mui/material/Box'
-import Typography from "./design-system/atoms/Typography";
-import Form from './design-system/molecules/form';
-import TextField from "./design-system/atoms/TextField";
+import Typography from "../design-system/atoms/Typography";
+import Form from '../design-system/molecules/form';
+import TextField from "../design-system/atoms/TextField";
 import Alert from "@mui/material/Alert";
 import CheckIcon from '@mui/icons-material/Check';
-import Button from "./design-system/atoms/Button";
+import Button from "../design-system/atoms/Button";
 
 type Props = {
     className?: string;
