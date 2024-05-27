@@ -1,48 +1,57 @@
-'use client';
-import { useState } from 'react';
-import { Box, Button, IconButton, List, ListItem, ListItemIcon, ListItemText, Typography, Modal, Divider } from "@mui/material";
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
+"use client";
+import { useState } from "react";
+import {
+  Box,
+  Button,
+  IconButton,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+  Modal,
+  Divider,
+} from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { TodoQuery } from "@/lib/types/todo-types";
 import { deleteTodo } from "@/app/api/todo";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 
 type TodoListProps = {
-  todos: TodoQuery[],
-  token: string
-}
+  todos: TodoQuery[];
+  token: string;
+};
 
 const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  position: "absolute" as "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor: "background.paper",
+  border: "2px solid #000",
   boxShadow: 24,
   pt: 2,
   px: 4,
   pb: 3,
-  textAlign: 'center',
-}
-
-
+  textAlign: "center",
+};
 
 const TodoItem = styled(ListItem)({
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  padding: '10px',
-  borderBottom: '1px solid #e0e0e0',
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: "10px",
+  borderBottom: "1px solid #e0e0e0",
 });
 
-const ActionButtons = styled('div')({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '10px',
+const ActionButtons = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
 });
 
 export default function TodoList({ todos, token }: TodoListProps) {
@@ -68,7 +77,7 @@ export default function TodoList({ todos, token }: TodoListProps) {
           aria-labelledby="child-modal-title"
           aria-describedby="child-modal-description"
         >
-          <Box sx={{...style}}>
+          <Box sx={{ ...style }}>
             <Typography variant="h6" id="child-modal-title">
               Supprimer la tâche : {selectedTodo?.name} ?
             </Typography>
@@ -82,7 +91,9 @@ export default function TodoList({ todos, token }: TodoListProps) {
               <Button
                 variant="contained"
                 color="secondary"
-                onClick={() => selectedTodo ? handleDelete(selectedTodo._id) : null}
+                onClick={() =>
+                  selectedTodo ? handleDelete(selectedTodo._id) : null
+                }
                 sx={{ ml: 2 }}
               >
                 Supprimer
@@ -91,7 +102,14 @@ export default function TodoList({ todos, token }: TodoListProps) {
           </Box>
         </Modal>
       )}
-      <List sx={{ width: '100%', margin: "auto", bgcolor: 'background.paper', padding: 8 }}>
+      <List
+        sx={{
+          width: "100%",
+          margin: "auto",
+          bgcolor: "background.paper",
+          padding: 8,
+        }}
+      >
         {todos.map((todo) => (
           <TodoItem key={todo._id} disableGutters>
             <Box>

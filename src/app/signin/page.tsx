@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Login from "@/components/signin/login";
 import React from "react";
 

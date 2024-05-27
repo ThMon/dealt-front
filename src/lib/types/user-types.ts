@@ -1,21 +1,20 @@
 export type UserQuery = {
-    _id: string;
-    firstname: string;
-    lastname: string;
-    email: string;
-    password: string;
-    __v: number
+  _id: string;
+  firstname: string;
+  lastname: string;
+  email: string;
+  password: string;
+  __v: number;
 };
-  
+
 export type createUserDto = {
-    firstname: string;
-    lastname: string;
-    email: string;
-    password: string;
+  firstname: string;
+  lastname: string;
+  email: string;
+  password: string;
 };
 
 export type loginDto = {
-    email: string;
-    password: string;
+  email: string;
+  password: string;
 };
-  

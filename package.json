@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "npx prettier --write '*.{js,json}' '**/*.{js,ts,tsx,html}'",
+    "pretty-quick": "pretty-quick"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -19,6 +21,8 @@
     "axios": "^1.7.2",
     "next": "14.2.3",
     "next-auth": "^4.24.7",
+    "prettier": "^3.2.5",
+    "pretty-quick": "^4.0.0",
     "react": "^18",
     "react-dom": "^18"
   },
